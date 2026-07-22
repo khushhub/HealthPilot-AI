@@ -1,4 +1,4 @@
-# 🩺 Healthcare Appointment & Triage Assistant
+#  Healthcare Appointment & Triage Assistant
 
 > *"Because nobody should have to guess how urgent their symptoms are."*
 
@@ -8,30 +8,82 @@ Built end-to-end as a portfolio project spanning **Data Analytics, Data Science,
 
 ---
 
-## ✨ Why this project exists
+##  Why this project exists
 
 Healthcare shouldn't feel like a maze. Patients often don't know whether their symptoms need a routine check-up or urgent care — and clinics lose time and money to no-shows they can't predict.
 
 This project simulates a smarter, calmer version of that experience: describe how you feel, get a sensible triage suggestion, book a slot, and chat with an AI assistant grounded in trusted public guidance — no guesswork, no dead ends.
 
-> ⚠️ **Educational project only.** Built with public and synthetic data. Not affiliated with the NHS. Not a substitute for real medical advice. **In an emergency, always call 999 (UK) or your local emergency number.**
+>  **Educational project only.** Built with public and synthetic data. Not affiliated with the NHS. Not a substitute for real medical advice. **In an emergency, always call 999 (UK) or your local emergency number.**
 
 ---
 
-## 🧠 What it actually does
+##  What it actually does
 
 | Feature | What it means for the user |
 |---|---|
-| 🗣️ **Symptom entry** | Describe symptoms in plain language |
-| 🚦 **AI triage suggestion** | Get sorted into Self-care, Routine GP, Urgent, or Emergency |
-| 📅 **Appointment booking** | Find and book the right slot instantly |
-| 💬 **AI health chatbot** | Ask general health questions, answered with cited sources (RAG) |
-| 📊 **Admin dashboard** | Live view of appointments, no-show risk, and daily trends |
-| 🚨 **Emergency escalation** | Red-flag symptoms trigger an immediate safety message |
+|  **Symptom entry** | Describe symptoms in plain language |
+|  **AI triage suggestion** | Get sorted into Self-care, Routine GP, Urgent, or Emergency |
+|  **Appointment booking** | Find and book the right slot instantly |
+|  **AI health chatbot** | Ask general health questions, answered with cited sources (RAG) |
+|  **Admin dashboard** | Live view of appointments, no-show risk, and daily trends |
+|  **Emergency escalation** | Red-flag symptoms trigger an immediate safety message |
 
 ---
 
-## 🏗️ How it's built
+##  How it's built
+
+```
+Patient
+   ↓
+Frontend (React + Next.js)
+   ↓
+Backend (FastAPI)
+   ├── PostgreSQL Database
+   ├── Machine Learning Models
+   └── AI Chatbot (RAG)
+```
+
+A clean, layered system where every piece has one job — and does it well.
+
+---
+
+##  Tech stack at a glance
+
+| Layer | Tools |
+|---|---|
+| **Frontend** | React, Next.js, TypeScript, Tailwind CSS |
+| **Backend** | FastAPI, JWT Auth, Pydantic |
+| **Database** | PostgreSQL |
+| **Machine Learning** | scikit-learn, XGBoost |
+| **Generative AI** | OpenAI / Anthropic API, LangChain, FAISS |
+| **DevOps** | Docker, GitHub Actions, Render |
+| **Testing** | pytest, Jest |
+
+---
+
+##  The datasets behind it
+
+No real patient data — ever. Just public and synthetic sources:
+
+- **Medical Appointment No-Shows** (Kaggle) — ~110k real-world booking records
+- **Synthea** (MITRE) — fully synthetic patient generator
+- **NHS England Open Data** — GP appointment statistics
+- **NICE Clinical Knowledge Summaries** — grounding text for the AI chatbot
+
+---
+
+##  Built responsibly
+
+-  Only public/synthetic data, always
+-  No secrets or credentials ever committed
+-  Prompt-injection safeguards on the chatbot
+-  Visible medical disclaimer in every screen
+-  UK GDPR-style data handling, even for demo data
+
+---
+
+##  Project structure
 
 ```
 nhs-triage-assistant/
@@ -66,81 +118,16 @@ nhs-triage-assistant/
 └── README.md
 ```
 
-A clean, layered system where every piece has one job — and does it well.
-
 ---
 
-## 🛠️ Tech stack at a glance
-
-| Layer | Tools |
-|---|---|
-| **Frontend** | React, Next.js, TypeScript, Tailwind CSS |
-| **Backend** | FastAPI, JWT Auth, Pydantic |
-| **Database** | PostgreSQL |
-| **Machine Learning** | scikit-learn, XGBoost |
-| **Generative AI** | OpenAI / Anthropic API, LangChain, FAISS |
-| **DevOps** | Docker, GitHub Actions, Render |
-| **Testing** | pytest, Jest |
-
----
-
-## 🚀 The build journey — 3 months, 3 chapters
-
-### 📦 Month 1 — Foundations
-Setting the stage: repo, datasets, database schema, and a working backend skeleton.
-
-### 🤖 Month 2 — Intelligence
-Teaching the system to think: feature engineering, model training, and a frontend that brings it to life.
-
-### 💡 Month 3 — Conversation
-Giving it a voice: a Generative AI chatbot with retrieval-augmented answers, full integration, testing, and deployment.
-
----
-
-## 📊 The datasets behind it
-
-No real patient data — ever. Just public and synthetic sources:
-
-- **Medical Appointment No-Shows** (Kaggle) — ~110k real-world booking records
-- **Synthea** (MITRE) — fully synthetic patient generator
-- **NHS England Open Data** — GP appointment statistics
-- **NICE Clinical Knowledge Summaries** — grounding text for the AI chatbot
-
----
-
-## 🔒 Built responsibly
-
-- ✅ Only public/synthetic data, always
-- ✅ No secrets or credentials ever committed
-- ✅ Prompt-injection safeguards on the chatbot
-- ✅ Visible medical disclaimer in every screen
-- ✅ UK GDPR-style data handling, even for demo data
-
----
-
-## 📁 Project structure
-
-```
-nhs-triage-assistant/
-├── backend/        → APIs, business logic, tests
-├── frontend/        → React/Next.js interface
-├── ml/              → Notebooks, models, training scripts
-├── genai/           → RAG pipeline, prompts, guardrails
-├── data/             → Raw & processed datasets (gitignored)
-├── docs/            → Architecture diagrams, data sources
-└── docker-compose.yml
-```
-
----
-
-## 🎯 Status
+##  Status
 
 **Week 1 complete** — project scope defined, architecture planned, roadmap locked in.
 **Up next:** dataset collection and database design (Month 1, Week 2).
 
 ---
 
-## 👤 Author
+##  Author
 
 **Murari Rama Naga Durga Sri Sai Kumar**
 *Learning by building — one commit at a time.*
