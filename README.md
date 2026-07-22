@@ -120,16 +120,9 @@ nhs-triage-assistant/
 
 ---
 
-##  Status
-
-**Week 1 complete** — project scope defined, architecture planned, roadmap locked in.
-**Up next:** dataset collection and database design (Month 1, Week 2).
-
----
-
 ##  Author
 
-**Murari Rama Naga Durga Sri Sai Kumar**
+**Khushi**
 *Learning by building — one commit at a time.*
 
 ---
