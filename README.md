@@ -123,9 +123,7 @@ nhs-triage-assistant/
 ##  Author
 
 **Khushi**
-*Learning by building — one commit at a time.*
 
----
 
 <p align="center">
   <em>Made with curiosity, careful data handling, and a healthy respect for what AI shouldn't be trusted to decide alone.</em>
