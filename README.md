@@ -34,14 +34,36 @@ This project simulates a smarter, calmer version of that experience: describe ho
 ## 🏗️ How it's built
 
 ```
-Patient
-   ↓
-Frontend (React + Next.js)
-   ↓
-Backend (FastAPI)
-   ├── PostgreSQL Database
-   ├── Machine Learning Models
-   └── AI Chatbot (RAG)
+nhs-triage-assistant/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── backend/
+│   ├── app/              (routes, models, schemas, services)
+│   ├── tests/
+│   └── requirements.txt
+├── frontend/
+│   ├── app/               (Next.js pages/components)
+│   ├── tests/
+│   └── package.json
+├── ml/
+│   ├── notebooks/         (EDA, feature engineering, modelling)
+│   ├── models/            (saved model artifacts - or Git LFS)
+│   └── src/               (training & evaluation scripts)
+├── genai/
+│   ├── rag_pipeline/      (chunking, embedding, retrieval)
+│   └── prompts/           (system prompts, guardrail templates)
+├── data/
+│   ├── raw/                (gitignored - download scripts only)
+│   └── processed/          (small samples only, if any)
+├── docs/
+│   ├── architecture.png
+│   ├── DATA_SOURCES.md
+│   └── data_dictionary.md
+├── docker-compose.yml
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 A clean, layered system where every piece has one job — and does it well.
